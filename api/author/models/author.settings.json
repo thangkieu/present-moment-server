@@ -15,6 +15,10 @@
     },
     "bio": {
       "type": "richtext"
+    },
+    "poem": {
+      "via": "author",
+      "model": "poem"
     }
   }
 }

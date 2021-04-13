@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/13/2021 5:51:53 PM"
+    "x-generation-date": "04/13/2021 7:04:51 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3310,6 +3310,31 @@
           "bio": {
             "type": "string"
           },
+          "poem": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "author": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3322,6 +3347,9 @@
             "type": "string"
           },
           "bio": {
+            "type": "string"
+          },
+          "poem": {
             "type": "string"
           },
           "published_at": {
@@ -3347,6 +3375,34 @@
           "content": {
             "type": "string"
           },
+          "author": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
+              },
+              "poem": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3356,6 +3412,9 @@
       "NewPoem": {
         "properties": {
           "content": {
+            "type": "string"
+          },
+          "author": {
             "type": "string"
           },
           "published_at": {
