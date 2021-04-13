@@ -1,0 +1,38 @@
+{
+  "name": "present-moment-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "knex": "0.21.18",
+    "sqlite3": "5.0.0",
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-documentation": "^3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-graphql": "^3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-utils": "3.5.4"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "f8582722-44b2-4d0d-b67d-f2b262470d6d"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": "^6.0.0"
+  },
+  "license": "MIT"
+}

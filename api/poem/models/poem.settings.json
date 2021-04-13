@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "poem",
+  "info": {
+    "name": "poem"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
