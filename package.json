@@ -7,9 +7,11 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "deploy": "git push heroku HEAD:main"
   },
   "dependencies": {
+    "@sentry/node": "^6.2.3",
     "knex": "0.21.18",
     "pg": "^8.5.1",
     "sqlite3": "5.0.0",

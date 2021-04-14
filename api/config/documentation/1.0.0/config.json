@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/poems": {
+    "/config": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the config's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve config document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Poem"
+                    "$ref": "#/components/schemas/Config"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Config"
         ],
         "parameters": [
           {
@@ -192,255 +192,16 @@
           }
         ]
       },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Poem"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Poem"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPoem"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/poems/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Poem"
-        ],
-        "parameters": []
-      }
-    },
-    "/poems/random": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Poem"
-        ],
-        "parameters": []
-      }
-    },
-    "/poems/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Poem"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Poem"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single config record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve config document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Poem"
+                  "$ref": "#/components/schemas/Config"
                 }
               }
             }
@@ -478,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Config"
         ],
         "requestBody": {
           "description": "",
@@ -486,30 +247,19 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPoem"
+                "$ref": "#/components/schemas/NewConfig"
               }
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single config record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single config based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -552,26 +302,15 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Config"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       }
     }
   },
   "components": {
     "schemas": {
-      "Poem": {
+      "Config": {
         "required": [
           "id"
         ],
@@ -579,41 +318,13 @@
           "id": {
             "type": "string"
           },
-          "content": {
+          "Duration": {
+            "type": "integer"
+          },
+          "Facebook": {
             "type": "string"
           },
-          "author": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "bio": {
-                "type": "string"
-              },
-              "poems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "name": {
+          "Instagram": {
             "type": "string"
           },
           "published_at": {
@@ -622,15 +333,15 @@
           }
         }
       },
-      "NewPoem": {
+      "NewConfig": {
         "properties": {
-          "content": {
+          "Duration": {
+            "type": "integer"
+          },
+          "Facebook": {
             "type": "string"
           },
-          "author": {
-            "type": "string"
-          },
-          "name": {
+          "Instagram": {
             "type": "string"
           },
           "published_at": {
@@ -649,7 +360,7 @@
   },
   "tags": [
     {
-      "name": "Poem"
+      "name": "Config"
     }
   ]
 }

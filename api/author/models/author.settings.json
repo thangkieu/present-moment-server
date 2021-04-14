@@ -16,9 +16,9 @@
     "bio": {
       "type": "richtext"
     },
-    "poem": {
+    "poems": {
       "via": "author",
-      "model": "poem"
+      "collection": "poem"
     }
   }
 }

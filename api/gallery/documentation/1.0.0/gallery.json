@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/poems": {
+    "/galleries": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Poem"
+                    "$ref": "#/components/schemas/Gallery"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Poem"
+                  "$ref": "#/components/schemas/Gallery"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPoem"
+                "$ref": "#/components/schemas/NewGallery"
               }
             }
           }
         }
       }
     },
-    "/poems/count": {
+    "/galleries/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "parameters": []
       }
     },
-    "/poems/random": {
+    "/galleries/random": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -363,12 +363,12 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "parameters": []
       }
     },
-    "/poems/{id}": {
+    "/galleries/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -378,7 +378,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Poem"
+                  "$ref": "#/components/schemas/Gallery"
                 }
               }
             }
@@ -416,7 +416,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "parameters": [
           {
@@ -440,7 +440,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Poem"
+                  "$ref": "#/components/schemas/Gallery"
                 }
               }
             }
@@ -478,7 +478,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "requestBody": {
           "description": "",
@@ -486,7 +486,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPoem"
+                "$ref": "#/components/schemas/NewGallery"
               }
             }
           }
@@ -552,7 +552,7 @@
         },
         "summary": "",
         "tags": [
-          "Poem"
+          "Gallery"
         ],
         "parameters": [
           {
@@ -571,7 +571,7 @@
   },
   "components": {
     "schemas": {
-      "Poem": {
+      "Gallery": {
         "required": [
           "id"
         ],
@@ -579,12 +579,15 @@
           "id": {
             "type": "string"
           },
-          "content": {
-            "type": "string"
-          },
-          "author": {
+          "photo": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
@@ -593,16 +596,46 @@
               "name": {
                 "type": "string"
               },
-              "bio": {
+              "alternativeText": {
                 "type": "string"
               },
-              "poems": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "caption": {
+                "type": "string"
               },
-              "published_at": {
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
                 "type": "string"
               },
               "created_by": {
@@ -613,8 +646,8 @@
               }
             }
           },
-          "name": {
-            "type": "string"
+          "isDarkBg": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -622,16 +655,10 @@
           }
         }
       },
-      "NewPoem": {
+      "NewGallery": {
         "properties": {
-          "content": {
-            "type": "string"
-          },
-          "author": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
+          "isDarkBg": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -649,7 +676,7 @@
   },
   "tags": [
     {
-      "name": "Poem"
+      "name": "Gallery"
     }
   ]
 }

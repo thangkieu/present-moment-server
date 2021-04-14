@@ -1,8 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "poem",
+  "kind": "singleType",
+  "collectionName": "configs",
   "info": {
-    "name": "poem",
+    "name": "Config",
     "description": ""
   },
   "options": {
@@ -11,14 +11,13 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "content": {
-      "type": "richtext"
+    "Duration": {
+      "type": "integer"
     },
-    "author": {
-      "model": "author",
-      "via": "poems"
+    "Facebook": {
+      "type": "string"
     },
-    "name": {
+    "Instagram": {
       "type": "string"
     }
   }

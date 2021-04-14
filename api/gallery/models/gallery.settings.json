@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galleries",
+  "info": {
+    "name": "Gallery",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "isDarkBg": {
+      "type": "boolean"
+    }
+  }
+}

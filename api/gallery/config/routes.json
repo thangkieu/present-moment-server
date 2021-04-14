@@ -2,56 +2,56 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/poems",
-      "handler": "poem.find",
+      "path": "/galleries",
+      "handler": "gallery.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/poems/count",
-      "handler": "poem.count",
+      "path": "/galleries/count",
+      "handler": "gallery.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/poems/random",
-      "handler": "poem.findRandom",
+      "path": "/galleries/random",
+      "handler": "gallery.findRandom",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/poems/:id",
-      "handler": "poem.findOne",
+      "path": "/galleries/:id",
+      "handler": "gallery.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/poems",
-      "handler": "poem.create",
+      "path": "/galleries",
+      "handler": "gallery.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/poems/:id",
-      "handler": "poem.update",
+      "path": "/galleries/:id",
+      "handler": "gallery.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/poems/:id",
-      "handler": "poem.delete",
+      "path": "/galleries/:id",
+      "handler": "gallery.delete",
       "config": {
         "policies": []
       }
