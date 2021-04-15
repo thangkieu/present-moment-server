@@ -5,7 +5,7 @@ const { sanitizeEntity } = require("strapi-utils");
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
  */
-
+// just comment
 module.exports = {
   async findRandom(ctx) {
     const knex = strapi.connections.default;
