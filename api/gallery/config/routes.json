@@ -26,6 +26,14 @@
     },
     {
       "method": "GET",
+      "path": "/galleries/sync",
+      "handler": "gallery.syncPhotosFromFlickr",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/galleries/:id",
       "handler": "gallery.findOne",
       "config": {

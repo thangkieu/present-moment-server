@@ -11,19 +11,17 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "photo": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "isDarkBg": {
       "type": "boolean"
+    },
+    "photoURL": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "flickrId": {
+      "type": "string"
     }
   }
 }
