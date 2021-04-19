@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@sentry/node": "^6.2.3",
+    "flickr-sdk": "^3.10.0",
     "knex": "0.21.18",
     "pg": "^8.5.1",
     "sqlite3": "5.0.0",
