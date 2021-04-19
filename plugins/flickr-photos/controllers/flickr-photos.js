@@ -99,7 +99,10 @@ module.exports = {
         name: albumInfo.body.photoset.title._content,
       });
     } catch (e) {
-      ctx.throw(404, e.message);
+      ctx.throw(
+        404,
+        `${e.message} ${flickrKey} ${flickrAlbumId} ${flickrUserId}`
+      );
     }
   },
 };
