@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "flickr_photos",
+  "collectionName": "flickr-photos",
   "info": {
     "name": "flickr-photos"
   },
