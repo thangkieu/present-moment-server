@@ -33,14 +33,14 @@ module.exports = {
     );
   },
   async syncPhotosFromFlickr(ctx) {
+    const search = qs.parse(ctx.search.replace(/^\?/g, ""));
+
+    const flickrKey = strapi.config.get("server.fKey");
+    const flickrAlbumId =
+      search.albumId || strapi.config.get("server.fAlbumId");
+    const flickrUserId = strapi.config.get("server.fUserId");
+
     try {
-      const search = qs.parse(ctx.search.replace(/^\?/g, ""));
-
-      const flickrKey = strapi.config.get("server.fKey");
-      const flickrAlbumId =
-        search.albumId || strapi.config.get("server.fAlbumId");
-      const flickrUserId = strapi.config.get("server.fUserId");
-
       const flickr = new Flickr(flickrKey);
 
       const albumInfo = await flickr.photosets.getInfo({
