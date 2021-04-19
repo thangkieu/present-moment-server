@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "flickr-photos.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/random",
+      "handler": "flickr-photos.findRandom",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sync",
+      "handler": "flickr-photos.syncPhotosFromFlickr",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

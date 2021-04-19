@@ -1,0 +1,28 @@
+{
+  "name": "strapi-plugin-flickr-photos",
+  "version": "0.0.0",
+  "description": "Flickr Management.",
+  "strapi": {
+    "name": "Flickr Photos",
+    "icon": "plug",
+    "description": "Flickr Photos Management"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "Thang Kieu",
+    "email": "kqthang1505@gmail.com",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "Thang Kieu",
+      "email": "kqthang1505@gmail.com",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

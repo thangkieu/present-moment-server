@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flickr_photos",
+  "info": {
+    "name": "flickr-photos"
+  },
+  "options": {
+    "timestamps": true,
+    "increments": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "isDarkBg": {
+      "type": "boolean"
+    },
+    "photoURL": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "flickrId": {
+      "type": "string"
+    }
+  }
+}
